@@ -1,0 +1,15 @@
+变量：
+在Python中声明变量时不需要指定它的类型，只是给一个标识符赋值就声明了变
+量，实例代码如下：
+# 代码文件: chapter4/src/ch4.2.1.kt
+_hello = "Hello World"
+score_for_student = 0.0
+y = 20
+x = True
+b = False
+b = 20
+print(_hello, score_for_student, y, x, b)
+----------------------------
+
+变量声明不需要指定数据类型，你赋给它什么数值，它就是该类型的变量了
+注意b这个变量，虽然已经赋值False(bool)，但是它也可以接受其他类型

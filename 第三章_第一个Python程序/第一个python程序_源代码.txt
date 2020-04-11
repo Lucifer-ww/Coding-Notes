@@ -1,0 +1,39 @@
+1.程序运行方法：
+程序编写结束就可以运行了，可以使用快捷键Ctrl+F5运行程序。
+在visual studio code里面打开终端就可以找到调试控制台查看运行。
+
+2.编写代码：
+首先使用visual studio code或者任何编辑器创建一个文件，然后将文件保存为*.py的格式，
+接着在文件中编写代码。
+
+3.第一个python代码——Hello World!——hello.py
+输入如下代码：
+"""
+
+Created on 2020/1/9
+编写者 : Thomas
+
+"""
+string = "Hello World"
+print (string)
+
+fun main(args : Array <String>){
+    println ("Hello World")
+}
+
+||
+
+"""
+
+Created on 2020/1/9
+编写者 : Thomas
+
+"""
+
+string = "Hello World"
+print(string)
+print("Hello World")
+
+
+
+然后运行看结果，这是txt，无法上传图片
