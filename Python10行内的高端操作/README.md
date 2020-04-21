@@ -35,4 +35,5 @@ wc.generate('hello world! Python is Beautiful! I like it')  # 生成词云
 wc.to_file(r'Python10行内的高端操作\view\wordcloud.png')  # 保存词云
 ```
 ![ALT]()
-## :sunny:…………:sunny:
+## :sunny:这个抠图:sunny:
+代码都有了，但是模块没有，下载失败
