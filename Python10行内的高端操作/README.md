@@ -11,7 +11,7 @@
 + 识别图片中的文字
 + 人工智能
 
-## 生成二维码
+## :link:生成二维码:link:
 用到MyQR库，用`pip install MtQR`
 代码：
 ```py
@@ -25,5 +25,14 @@ myqr.run(
 )
 ```
 做一个自己博客的二维码
-
-![北极光~]("E:\王一涵programThomas\王一涵PythonThomas\Python-Learned\Python10行内的高端操作\view\blogc1.png")
+![]("https://github.com/Github-Programer/Python-Learned/blob/master/Python10%E8%A1%8C%E5%86%85%E7%9A%84%E9%AB%98%E7%AB%AF%E6%93%8D%E4%BD%9C/view/blogc1.png")
+## :cloud:词云:cloud:
+```py
+# -*- coding: UTF-8 -*-
+from wordcloud import WordCloud
+wc = WordCloud()  # 创建词云对象
+wc.generate('hello world! Python is Beautiful! I like it')  # 生成词云
+wc.to_file(r'Python10行内的高端操作\view\wordcloud.png')  # 保存词云
+```
+![ALT]()
+## :sunny:…………:sunny:
