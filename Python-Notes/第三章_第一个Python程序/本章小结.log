@@ -1,0 +1,3 @@
+本章通过一个HelloWorld实例，使读者了解到什么是Python Shell，Python如何启动Python Shell环境。
+然后介绍如何使用PyCharm、Eclipse+PyDev和Visual Studio Code 工具实现该实例具体过程。此外，还介绍了
+使用文本编辑器+Python解释器的实现过程。
