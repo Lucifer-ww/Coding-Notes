@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <input type="text" id="question">
+    <button id="btn">提问</button>
+    <span id="answer"></span>
+    <script>
+        var btn = document.getElementById('btn');
+        btn.onclick = function () {
+            var q = document.getElementById('question').value;
+            var answer = document.getElementById('answer');
+            var result = q.replace("我", "你");
+            result = result.replace("吗", "!");
+            result = result.replace("？", "!");
+            result = result.replace('你', '我');
+            answer.innerHTML=result;
+        }
+    </script>
+    <p>感觉怎么样，牛不牛？？？</p>
+</body>
+ 
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>calculator</title>
+        <link href="style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <script src="js.js"></script>
+        <div class="center">
+            <h1>HTML CSS, JavaScript 计算器</h1>
+            <a href="https://github.com/guuibayer/simple-calculator" target="_blank"><i class="fa fa-github"></i></a>
+            <form name="calculator">
+                <input type="button" id="clear" class="btn other" value="C">
+                <input type="text" id="display">
+                <br>
+                <input type="button" class="btn number" value="7" onclick="get(this.value);">
+                <input type="button" class="btn number" value="8" onclick="get(this.value);">
+                <input type="button" class="btn number" value="9" onclick="get(this.value);">
+                <input type="button" class="btn operator" value="+" onclick="get(this.value);">
+                <br>
+                <input type="button" class="btn number" value="4" onclick="get(this.value);">
+                <input type="button" class="btn number" value="5" onclick="get(this.value);">
+                <input type="button" class="btn number" value="6" onclick="get(this.value);">
+                <input type="button" class="btn operator" value="*" onclick="get(this.value);">
+                <br>
+                <input type="button" class="btn number" value="1" onclick="get(this.value);">
+                <input type="button" class="btn number" value="2" onclick="get(this.value);">
+                <input type="button" class="btn number" value="3" onclick="get(this.value);">
+                <input type="button" class="btn operator" value="-" onclick="get(this.value);">
+                <br>
+                <input type="button" class="btn number" value="0" onclick="get(this.value);">
+                <input type="button" class="btn operator" value="." onclick="get(this.value);">
+                <input type="button" class="btn operator" value="/" onclick="get(this.value);">
+                <input type="button" class="btn other" value="=" onclick="calculates();">
+            </form>
+        </div>
+    </body>
+</html>

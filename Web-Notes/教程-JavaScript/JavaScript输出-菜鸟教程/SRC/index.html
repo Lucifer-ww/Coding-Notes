@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>【JavaScript学习】菜鸟教程-JavaScript输出</title>
+    </head>
+    <body>
+        <p>JavaScript输出有4种，至少现在是4种</p>
+        <pre>
+        使用 window.alert() 弹出警告框。
+        使用 document.write() 方法将内容写到 HTML 文档中。
+        使用 innerHTML 写入到 HTML 元素。
+        使用 console.log() 写入到浏览器的控制台。</pre>
+        <script>
+            window.alert("hello world")
+            document.write("上面是弹出警告框，哈哈，这个是document.write写到HTML文档中")
+            console.log("hello world")
+        </script>
+        <p>console.log可以在web控制台上看见</p>
+        <p>JavaScript可以输出日期，调用Date()</p>
+        <button onclick = "func()">点击我查看日期</button>
+        <script>
+            function func()
+            {
+                window.alert(Date());
+            }
+        </script>
+        <p>JavaScript中的func()函数和function关键字先不用研究，知道是函数就行</p>
+        <p>但是有几个要注意的地方：</p>
+        <ul>
+            <li>Date()：这个函数可以直接输出，调用日期</li>
+            <li>&lt;button onclick = "func()"&gt;：button标签，可以在HTML中设置按钮，后面详解，onclick可以判定鼠标点击，<br />还可以调用函数，在双引号中写出</li>
+        </ul>
+    </body>
+</html>

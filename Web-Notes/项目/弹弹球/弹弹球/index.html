@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>弹弹球</title>
+		<style>
+			#main{
+			    width: 600px; 
+			    height:300px;
+			    background: gray;
+			    margin-left: 300px;
+			    position: absolute; 
+			}
+			#ball {
+			    width: 20px;
+			    height: 20px;
+			    background-color: yellow;
+			    border-radius: 50%;
+			    position: relative;
+			}
+			#board{
+			    width: 80px;
+			    height: 10px;
+			    background: red;
+			    position: absolute;
+			    bottom: 0;
+			    left: 450px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div id="ball" style="left:0;top:0;"> </div>
+			<div id="board"></div>
+		</div>
+		<script>
+			var main = document.getElementById('main');
+			var ball = document.getElementById('ball');
+			var board = document.getElementById('board');
+			//设置小球运动速度
+			ball.speedX = 3;
+			ball.speedY = 4;
+			//控制小球运动轨迹
+			ball.run = function(){
+				//parseInt：将字符串转换为整数
+				var left = parseInt(this.style.left) + this.speedX; 
+				var top = parseInt(this.style.top) + this.speedY;
+				this.style.left = left + 'px';
+				this.style.top = top + 'px';
+				this.check( left,top);
+			}
+			//检测碰撞实践
+			ball.check = function(left,top){
+				if(left <= 0 || left >= 580){   
+					this.turnX();
+				}
+				//球撞到上边转向
+				if(top <= 0){
+					this.turnY();
+				}
+				//小球碰到下边时，未用挡板则输
+				if(top >= 282){
+					clearInterval();   //非setInterval
+					alert("您输了！点击确定再来一局！");
+					this.init();
+				}
+				//碰撞挡板后Y转向
+				var board_left = parseInt(board.style.left); //挡板的左边距
+				var board_top  = parseInt(board.style.top); //挡板的上边距
+				if(left  >= board_left && left  <= board_left+80 && top+20 >=board_top){
+					this.turnY();
+				}
+			}
+			//控制小球转向
+			ball.turnX = function(){
+				this.speedX = -this.speedX;
+			}
+			ball.turnY= function(){
+				this.speedY= -this.speedY;
+			}
+			//设置小球移动时间间隔为20ms
+			var clock = setInterval(function(){
+				ball.run();
+			},20)
+			//移动挡板
+			main.onmousemove=function(e){   
+				//如果进入非main区，则直接返回，无变化。用于防止鼠标进入红色挡板内发生相对于挡板的移动。
+				if(e.target!== main){  //严格不等于
+					return;
+				}
+				//假设位置是长方形挡板的底边中点。
+				board.style.left=e.offsetX-25+'px'; //数字与px（像素）之间不可有空格。
+				board.style.top=e.offsetY-9+'px';
+			}
+				ball.init = function(){ 
+				ball.style.left = 0;
+				ball.style.top = 0;
+			}
+		</script>
+	</body>
+</html>
