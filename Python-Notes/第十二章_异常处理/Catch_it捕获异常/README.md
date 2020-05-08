@@ -49,7 +49,7 @@ ValueError!
 ```
 这样try语句抛出异常，无法正确执行，只能走except语句，所以输出了处理异常语句
 
-<font color=orangered>如果你还想要异常对象，就是一场的报错，还可以修改代码</font>
+<font color=orangered>如果你还想要异常对象，就是异常的报错，还可以修改代码</font>
 
 ```python
 def read_date(in_date):
@@ -86,4 +86,19 @@ dt.today()
 ```
 这样可以把datetime简化成一个比较短的单词dt，意思不变
 
-还可以把异常信息用as带入一个字符串
+还可以把异常信息用as带入一个字符串，就像刚才那样。
+
+## 多层except代码块
+
+捕获异常可以有多重异常，那么就像elif一样，可以有多重except语句块。
+
+格式如下：
+```python
+try:
+    <语句>
+except [异常类型1]:
+    <处理异常>
+except [异常类型2]:
+    <处理异常>
+...
+```
