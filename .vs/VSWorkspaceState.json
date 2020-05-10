@@ -2,10 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\Python-Notes",
-    "\\Python-Notes\\例程",
     "\\Python-Notes\\例程\\去除整数列表中的素数",
-    "\\Python-Notes\\例程\\去除整数列表中的素数\\去除整数列表中的素数"
+    "\\Python-Notes\\例程\\去除整数列表中的素数\\去除整数列表中的素数",
+    "\\Python-Notes\\学习",
+    "\\Python-Notes\\学习\\图形界面开发学习笔记",
+    "\\Python-Notes\\学习\\图形界面开发学习笔记\\PythonGUI设计tkinter菜鸟编程书",
+    "\\Python-Notes\\学习\\图形界面开发学习笔记\\PythonGUI设计tkinter菜鸟编程书\\1-基本"
   ],
-  "SelectedNode": "\\Python-Notes\\例程\\去除整数列表中的素数\\去除整数列表中的素数\\去除整数列表中的素数.py",
+  "SelectedNode": "\\Python-Notes\\学习\\图形界面开发学习笔记\\PythonGUI设计tkinter菜鸟编程书\\1-基本\\2窗口的方法.py",
   "PreviewInSolutionExplorer": false
 }
