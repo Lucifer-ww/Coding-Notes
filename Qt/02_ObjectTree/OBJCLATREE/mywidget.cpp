@@ -1,6 +1,7 @@
 #include "mywidget.h"
 #include "ui_mywidget.h"
 #include <QPushButton>
+#include <mypushbutton.h>
 
 myWidget::myWidget(QWidget *parent)
     : QWidget(parent)
@@ -24,6 +25,12 @@ myWidget::myWidget(QWidget *parent)
     //title
 
     setWindowTitle("hello Qt");
+
+
+    //========================================
+    //========================================
+    //创建一个我自己的按钮
+    myPushButton * mybtn = new myPushButton;
 }
 
 myWidget::~myWidget()
