@@ -17,9 +17,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
+    mypushbutton.cpp \
     mywidget.cpp
 
 HEADERS += \
+    mypushbutton.h \
     mywidget.h
 
 FORMS += \
