@@ -102,3 +102,52 @@ except [异常类型2]:
     <处理异常>
 ...
 ```
+
+也可以把所有的异常放在一个元组中，如下：
+
+```python
+# coding: UTF-8
+import datetime as dt
+def read_date_from_file(filename):
+    try:
+        file = open(filename)
+        in_date = file.read()
+        in_date = in_date.strip()
+        date = dt.datetime.strptime(in_date, '%Y-%m-%d')
+        return date
+    except (ValueError, OSError) as e:
+        print('调用method1处理...')
+        print(e)
+```
+
+## 释放资源
+
+try和except中的语句会占用一些资源，如打开文件、网络连接、打开数据库和使用数据等这些资源不能通过垃圾回收机制收回，可以用finally关键字回收
+
+finally就是无论try中的语句可以执行还是不可以执行都会在结束时走一下finally中的回收语句。
+```python
+try:
+    <可能会抛出异常的语句>
+except [异常类型1]:
+    <处理异常>
+except [异常类型2]:
+    <处理异常>
+...
+except [异常类型n]:
+    <处理异常>
+finally:
+    <释放资源>
+```
+实例：
+```python
+def finally_f(filename)
+    try:
+        file = open(filename)
+    except ValueError as e:
+        print('Value!')
+    except OSError as e:
+        print('OS!')
+    finally:
+        file.close()
+```
+就这么简单！
