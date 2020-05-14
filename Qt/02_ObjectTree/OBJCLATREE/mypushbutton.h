@@ -1,7 +1,7 @@
 #ifndef MYPUSHBUTTON_H
 #define MYPUSHBUTTON_H
 
-#include <QWidget>
+#include <QPushButton>
 
 class myPushButton : public QWidget
 {
@@ -9,6 +9,8 @@ public:
     explicit myPushButton(QWidget *parent = nullptr);
 
 signals:
+    myPushButton();
+    ~myPushButton();
 
 };
 
