@@ -31,7 +31,7 @@ Label()的第一个参数是<font color=#00B0F0>父对象</font>，表示这个�
 
 我们在设计程序时，可以将上述参数称为<font color=#00B0F0>属性</font>设置:sunglasses:
 
-实例：
+## Test
 
 ```python
 # -*- coding: UTF-8 -*-
@@ -50,7 +50,17 @@ root.mainloop()
 
 一个窗口就出来了，中间有一句话：I LIKE TKINTER，对吗，不对的话就是Python安装有问题
 
+<img src="E:\ProgramThomas\Coding-Notes\Python-Notes\学习\图形界面开发学习笔记\PythonGUI设计tkinter菜鸟编程书\2-Label\1基本应用\image-20200515202659403.png" alt="image-20200515202659403" style="zoom:50%;" />
+
 然后在Python shell中的输出，label的类型是`<class 'tkinter.Label'>`
+
+## Widget共同属性 Color
+
+<font color=#00B0F0>fg</font>或<font color=#00B0F0>foreground</font>可以设置前景色，相当于标签的颜色；<font color=#00B0F0>bg</font>或<font color=#00B0F0>background</font>可以设置背景色。直接实例说明
+
+```python
+
+```
 
 
 
