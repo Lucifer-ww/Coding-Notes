@@ -5,11 +5,11 @@
 
 class myPushButton : public QWidget
 {
+    Q_OBJECT
 public:
     explicit myPushButton(QWidget *parent = nullptr);
 
 signals:
-    myPushButton();
     ~myPushButton();
 
 };
