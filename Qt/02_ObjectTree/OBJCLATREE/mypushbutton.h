@@ -9,8 +9,8 @@ class myPushButton : public QWidget
 public:
     explicit myPushButton(QWidget *parent = nullptr);
 
-signals:
     ~myPushButton();
+signals:
 
 };
 
