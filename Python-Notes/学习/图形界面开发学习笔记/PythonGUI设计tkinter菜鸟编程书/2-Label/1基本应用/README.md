@@ -50,7 +50,7 @@ root.mainloop()
 
 一个窗口就出来了，中间有一句话：I LIKE TKINTER，对吗，不对的话就是Python安装有问题
 
-然后在Pythonshell中的输出，label的类型是`<class 'tkinter.Label'>`
+然后在Python shell中的输出，label的类型是`<class 'tkinter.Label'>`
 
 
 
