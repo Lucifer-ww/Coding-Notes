@@ -59,7 +59,16 @@ root.mainloop()
 <font color=#00B0F0>fg</font>或<font color=#00B0F0>foreground</font>可以设置前景色，相当于标签的颜色；<font color=#00B0F0>bg</font>或<font color=#00B0F0>background</font>可以设置背景色。直接实例说明
 
 ```python
+# coding: UTF-8
+from tkinter import *
 
+root = Tk()
+root.title("ch2_3")
+label = Label(root, text="I Like Tkinter",
+                fg ="blue", bg = "yellow")
+label.pack()
+
+root.mainloop()
 ```
 
 <img src="E:\ProgramThomas\Coding-Notes\Python-Notes\学习\图形界面开发学习笔记\PythonGUI设计tkinter菜鸟编程书\2-Label\image-20200515203704216.png" alt="image-20200515203704216" style="zoom:50%;" />
