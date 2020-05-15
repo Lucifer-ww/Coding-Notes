@@ -50,7 +50,7 @@ root.mainloop()
 
 一个窗口就出来了，中间有一句话：I LIKE TKINTER，对吗，不对的话就是Python安装有问题
 
-<img src="E:\ProgramThomas\Coding-Notes\Python-Notes\学习\图形界面开发学习笔记\PythonGUI设计tkinter菜鸟编程书\2-Label\1基本应用\image-20200515202659403.png" alt="image-20200515202659403" style="zoom:50%;" />
+<img src="E:\ProgramThomas\Coding-Notes\Python-Notes\学习\图形界面开发学习笔记\PythonGUI设计tkinter菜鸟编程书\2-Label\image-20200515202659403.png" alt="image-20200515202659403" style="zoom:50%;" />
 
 然后在Python shell中的输出，label的类型是`<class 'tkinter.Label'>`
 
@@ -62,7 +62,7 @@ root.mainloop()
 
 ```
 
-
+<img src="E:\ProgramThomas\Coding-Notes\Python-Notes\学习\图形界面开发学习笔记\PythonGUI设计tkinter菜鸟编程书\2-Label\image-20200515203704216.png" alt="image-20200515203704216" style="zoom:50%;" />
 
 
 
