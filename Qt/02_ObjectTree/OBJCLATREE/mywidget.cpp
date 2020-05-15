@@ -31,7 +31,7 @@ myWidget::myWidget(QWidget *parent)
     //========================================
     //创建一个我自己的按钮
     myPushButton * mybtn = new myPushButton;
-    mybtn -> move(200, 0);
+    mybtn -> move(300, 300);
     mybtn -> setParent(this);
 }
 
