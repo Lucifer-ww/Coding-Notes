@@ -33,7 +33,24 @@ Label()的第一个参数是<font color=#00B0F0>父对象</font>，表示这个�
 
 实例：
 
+```python
+# -*- coding: UTF-8 -*-
+#!/usr/bin/python3
 
+from tkinter import *
+
+root = Tk()
+root.title("ch2_1")
+label = Label(root, text="I LIKE TKINTER")
+label.pack()  # 包装与定位组件
+print(type(label))  # 传回Label数据类型
+
+root.mainloop()
+```
+
+一个窗口就出来了，中间有一句话：I LIKE TKINTER，对吗，不对的话就是Python安装有问题
+
+然后在Pythonshell中的输出，label的类型是`<class 'tkinter.Label'>`
 
 
 
