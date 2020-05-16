@@ -123,6 +123,39 @@ root.mainloop()
 
 就是左上角了
 
+下面是anchor方位参数列表
+
++ nw
++ n
++ ne
++ w
++ center
++ e
++ sw
++ s
++ se
+
+<small><font color=#B000F0>注：以上参数为小写时必须加“”引号，如果不加就要转成大写，如center转换成<font color=#00B0F0>CENTER</font></font></small>
+
+## Label文字输出换行位置wraplength
+
+可以设置文字在多少个像素之后换行
+
+```python
+# coding: UTF-8
+from tkinter import *
+
+root = Tk()
+root.title("ch2_6")
+label = Label(root, text="I likt Tkinter", fg='blue',
+              bg='yellow', height=3, width=15, anchor='se', wraplength=40)
+
+label.pack()
+root.mainloop()
+```
+
+
+
 ><p id=demo>News:</p>
 >
 >我的编程学习笔记仓库已经出炉上线，正在快速维护中……
