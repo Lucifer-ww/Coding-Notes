@@ -154,7 +154,20 @@ label.pack()
 root.mainloop()
 ```
 
+<img src="E:\ProgramThomas\Coding-Notes\Python-Notes\学习\图形界面开发学习笔记\PythonGUI设计tkinter菜鸟编程书\2-Label\image-20200516100852516.png" alt="image-20200516100852516" style="zoom:50%;" />
 
+## Widget共同属性Font
+
+设置文字字形，包含以下内容
+
++ <font color=#00B0F0>字形family</font>：如<font color=#F09000>Helvetica</font>、<font color=#F09000>Times</font>等，读者可以进入word或者记事本参考系统字形，或者进入系统字体文件夹中查看
++ <font color=#00B0F0>字号size</font>：单位<font color=#F09000>像素</font>
++ <font color=#00B0F0>weight</font>：例如<font color=#F09000>bold</font>（粗体）、<font color=#F09000>normal</font>（无）
++ <font color=#00B0F0>slant</font>：例如<font color=#F0A000>italic</font>、<font color=#F0A000>roman</font>，如果不是italic就是roman
++ <font color=#00B0F0>underline</font>：True或False
++ <font color=#00B0F0>overstrike</font>：True或False
+
+重新设计ch2_4.py文件，使用Helvetic字形，大小是20，粗体显示
 
 ><p id=demo>News:</p>
 >
