@@ -73,7 +73,55 @@ root.mainloop()
 
 <img src="E:\ProgramThomas\Coding-Notes\Python-Notes\学习\图形界面开发学习笔记\PythonGUI设计tkinter菜鸟编程书\2-Label\image-20200515203704216.png" alt="image-20200515203704216" style="zoom:50%;" />
 
+## Widget共同属性Dimensions
 
+设置width和height，前景色是蓝色
+
+```python
+# coding: UTF-8
+from tkinter import *
+rook = Tk()
+root.title("ch2_4")
+label = Label(root, text="I Like tkinter", fg = "blue", bg="yellow", height=3, width=15)
+label.pack()
+root.mainloop()
+```
+
+<img src="E:\ProgramThomas\Coding-Notes\Python-Notes\学习\图形界面开发学习笔记\PythonGUI设计tkinter菜鸟编程书\2-Label\image-20200516095806221.png" alt="image-20200516095806221" style="zoom:50%;" />
+
+## Widget共同属性Anchor
+
+<font color=#00B0F0>Anchor</font>其实是指标签文字在标签区域输出位置的设置，在默认情况下Widget控件是<font color=#00B0F0>上下与左右都居中对齐</font>，我们也可以使用anchor选项设定Widget控件的对齐。
+
+```python
+# coding: UTF-8
+from tkinter import *
+
+root = Tk()
+root.title("ch2_6")
+label = Label(root, text = "I likt Tkinter", fg = 'blue', bg='yellow',height =3, width= 15, anchor = 'se')
+
+label.pack()
+root.mainloop()
+```
+
+<img src="E:\ProgramThomas\Coding-Notes\Python-Notes\学习\图形界面开发学习笔记\PythonGUI设计tkinter菜鸟编程书\2-Label\image-20200516100214548.png" alt="image-20200516100214548" style="zoom:50%;" />
+
+`anchor='se'`这句是右下角
+
+```python
+# coding: UTF-8
+from tkinter import *
+
+root = Tk()
+root.title("ch2_6")
+label = Label(root, text = "I likt Tkinter", fg = 'blue', bg='yellow',height =3, width= 15, anchor = 'nw')
+
+label.pack()
+root.mainloop()
+```
+
+就是左上角了
 
 ><p id=demo>News:</p>
 >
