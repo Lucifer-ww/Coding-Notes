@@ -167,7 +167,25 @@ root.mainloop()
 + <font color=#00B0F0>underline</font>：True或False
 + <font color=#00B0F0>overstrike</font>：True或False
 
+```python
+# coding: UTF-8
+from tkinter import *
+root = Tk()
+root.title("ch2_4")
+label = Label(root, text="I Like tkinter", fg="blue",
+              bg="yellow", height=3, width=15,
+              font="Helvetic 20 bold")
+label.pack()
+root.mainloop()
+```
+
 重新设计ch2_4.py文件，使用Helvetic字形，大小是20，粗体显示
+
+<img src="E:\ProgramThomas\Coding-Notes\Python-Notes\学习\图形界面开发学习笔记\PythonGUI设计tkinter菜鸟编程书\2-Label\image-20200516101632398.png" alt="image-20200516101632398" style="zoom:50%;" />
+
+## Label的justify参数
+
+控制最后一行的输出，就不用说了，下一次说Label中插图
 
 ><p id=demo>News:</p>
 >
