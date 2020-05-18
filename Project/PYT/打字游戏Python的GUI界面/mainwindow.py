@@ -50,13 +50,14 @@ lbtip = Label(root, bitmap="info",
 # Entry cursor circle
 
 intxtL = Label(root, text="输入> ")
-intxtL.grid(row=0)
+
 intxt = Entry(root, show="*")
 
 lb.grid()
 lb2.grid()
 lbtip.grid()
-intxt.grid(row=0, column=1)
+intxtL.grid(row=3)
+intxt.grid(row=3,column=0)
 # textTip = Text(root)
 # textTip.pack(fill=BOTH, expand=True, padx=3, pady=2)
 # textTip.insert(END, chstr)
