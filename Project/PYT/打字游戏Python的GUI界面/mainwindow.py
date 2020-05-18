@@ -5,6 +5,10 @@ from tkinter import *
 import random
 import time
 
+def msgShow():
+    label["text"] = 'I Love Python'
+    label["bg"] = 'orangerad'
+
 root = Tk()
 root.title("打字游戏GUI")
 root.iconbitmap("iconbitmap.ico")
@@ -12,7 +16,7 @@ root.geometry("500x400")  # 779*655
 lb = Label(root, bitmap="hourglass",
            compound="left",
            cursor="target",
-           text="tkinter",
+           text="AC打字通",
            fg="blue", bg="yellow",
            anchor=CENTER, font=("Helvetic", 20, "bold")
            )
@@ -22,17 +26,35 @@ lb2 = Label(root, bitmap = "question",
             text="提示：打字游戏，点击 开始 按钮即开始计时，最后点击 提交 按钮即可",
             fg = "#FF0000", bg = "lightyellow",
             )
+
 characters = [] #0~26
 for i in range(0, 50):
     tmp = random.randint(0, 25)
     characters.append(chr(ord('a') + tmp))
 
-print(characters)
+#print(characters)
 chstr = ""
 for i in characters:
     chstr += i
 
 print(chstr)
+lbtip = Label(root, bitmap="info",
+              compound="left",
+              text="样例" + chstr,
+              fg ="green", bg="#cccccc",
+              font=("simsun", 12), underline=True)
+# Entry cursor circle
+
+intxtL = Label(root, text="输入> ")
+intxtL.grid(row=0)
+
+intxt = Entry(root)
+intxt.grid(row = 0, column= 1)
+
 lb.pack()
 lb2.pack()
+lbtip.pack()
+# textTip = Text(root)
+# textTip.pack(fill=BOTH, expand=True, padx=3, pady=2)
+# textTip.insert(END, chstr)
 root.mainloop()
