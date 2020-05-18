@@ -5,7 +5,7 @@ from tkinter import *
 import random
 import time
 import os
-ft = r"E:\ProgramThomas\Coding-Notes\Project\PYT\打字游戏Python的GUI界面\resource"
+ft = r"E:\ProgramThomas\Coding-Notes\Project\PYT\打字游戏Python的GUI界面\resource\loggerstr.log"
 '''
 def msgShow():
     label["text"] = 'I Love Python'
@@ -40,8 +40,8 @@ for i in characters:
     chstr += i
 
 print(chstr)
-fff=open(ft)
-fff.write(chstr)
+fff=open(ft, 'a+')
+fff.write('\n'+chstr)
 lbtip = Label(root, bitmap="info",
               compound="left",
               text="样例" + chstr,
