@@ -4,6 +4,8 @@
 from tkinter import *
 import random
 import time
+import os
+ft = r"E:\ProgramThomas\Coding-Notes\Project\PYT\打字游戏Python的GUI界面\resource"
 '''
 def msgShow():
     label["text"] = 'I Love Python'
@@ -38,6 +40,8 @@ for i in characters:
     chstr += i
 
 print(chstr)
+fff=open(ft)
+fff.write(chstr)
 lbtip = Label(root, bitmap="info",
               compound="left",
               text="样例" + chstr,
@@ -47,13 +51,12 @@ lbtip = Label(root, bitmap="info",
 
 intxtL = Label(root, text="输入> ")
 intxtL.grid(row=0)
+intxt = Entry(root, show="*")
 
-intxt = Entry(root)
-intxt.grid(row = 0, column= 1)
-
-lb.pack()
-lb2.pack()
-lbtip.pack()
+lb.grid()
+lb2.grid()
+lbtip.grid()
+intxt.grid(row=0, column=1)
 # textTip = Text(root)
 # textTip.pack(fill=BOTH, expand=True, padx=3, pady=2)
 # textTip.insert(END, chstr)
