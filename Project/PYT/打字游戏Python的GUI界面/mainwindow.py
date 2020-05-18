@@ -4,11 +4,11 @@
 from tkinter import *
 import random
 import time
-
+'''
 def msgShow():
     label["text"] = 'I Love Python'
     label["bg"] = 'orangerad'
-
+'''
 root = Tk()
 root.title("打字游戏GUI")
 root.iconbitmap("iconbitmap.ico")
