@@ -5,6 +5,8 @@ from tkinter import *
 import random
 import time
 import os
+timestrS="" #时间记录器-first
+timestrE = "" #时间记录器-last
 ft = r"E:\ProgramThomas\Coding-Notes\Project\PYT\打字游戏Python的GUI界面\resource\loggerstr.log"
 '''
 def msgShow():
@@ -15,6 +17,12 @@ def getStr(ent):
     #返回Entry的值
     return ent.get()
 
+def pushStart():
+    timestrS = str(int(str(time.time())))
+
+def pushEnd():
+    timestrE = str(int(str(time.time())) - int(timestrS))
+# --------------------------------
 root = Tk()
 root.title("打字游戏GUI")
 root.iconbitmap("iconbitmap.ico")
