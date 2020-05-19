@@ -4,10 +4,13 @@
 from tkinter import *
 import random
 import time
+from datetime import datetime
 import os
-constin: str #输入汇总changliang
-timestrS=0  # 时间记录器-first
+constin="" #输入汇总changliang
+
+timestrS=datetime.utcnow()  # 时间记录器-first
 timestrLast=0  # 时间记录器-last
+
 ft = r"E:\ProgramThomas\Coding-Notes\Project\PYT\打字游戏Python的GUI界面\resource\loggerstr.log"
 '''
 def msgShow():
@@ -25,18 +28,21 @@ def getStr(ent):
 
 
 def pushStart():
-    timestrS=time.time()
+    #timestrS=time.time()
+    timestrS = datetime.utcnow()
     print("get timestamp start of->timestrS={0}".format(timestrS))
-    pass
 
 
 def pushEnd():
     getStr(intxt)
-    fmmf = time.time()
-    timtmp = (fmmf - timestrS)
-    print("get timestamp this of->time.time()={0}".format(time.time()))
-    print("get timestamp minx of->timtmp={0}".format(timtmp))
-    timestrLast = int(timtmp)
+    #fmmf = time.time()
+    fmmf = datetime.utcnow()
+    #timtmp = fmmf - timestrS
+    timtmps = timestrS.second+timestrS.minute*60
+    timtmpe = fmmf.second+fmmf.minute*60
+    #print("get timestamp this of->time.time()={0}".format(time.time()))
+    #print("get timestamp minx of->timtmp={0}".format(timtmp))
+    timestrLast = timtmps - timtmpe
     print("get timestamp end of->timestrLast={0}".format(timestrLast))
 
 
