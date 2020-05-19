@@ -56,7 +56,7 @@ lbtip = Label(root, bitmap="info",
 INframe=Frame(root, width=70) #定义输入框架
 intxtL = Label(INframe, text="输入> ")
 
-intxt = Entry(INframe, width=50)
+intxt = Entry(INframe, width=50, show="*")
 
 lb.grid()
 lb2.grid()
