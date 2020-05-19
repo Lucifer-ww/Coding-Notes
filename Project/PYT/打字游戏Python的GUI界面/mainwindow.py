@@ -69,6 +69,7 @@ def pushEnd():
 
     #PHOTO IMAGE
     lbot = Label(root, width=50, text="时间:"+str(cyongshi),
+             #bitmap='',
              compound='left',
              anchor=SW,
              bg='skyblue')
