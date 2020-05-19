@@ -89,7 +89,7 @@ def pushEnd():
 
     ccList = check(chstr, constin)
     endstr = "时间:" + str(cyongshi) + '秒' + '\n'
-    endstr += '正确率:' + str(ccList[0]) + '\n'
+    endstr += '正确率:' + str(ccList[0]) + '%\n'
     endstr += '对了:' + str(ccList[1]) + '个\n'
     endstr += '错了:' + str(ccList[2]) + '个\n'
     #PHOTO IMAGE
