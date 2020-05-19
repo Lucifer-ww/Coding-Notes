@@ -6,6 +6,14 @@ import random
 import time
 from datetime import datetime
 import os
+
+#---------------------------check---------------------------
+class Cac(object):
+    def __init__(self, index: str, commit: str):
+        pass
+#---------------------------check---------------------------
+
+
 constin="" #输入汇总changliang
 
 timestrS=datetime.utcnow()  # 时间记录器-first
@@ -98,6 +106,8 @@ btnEnd = Button(btnframe, text="输入结束", fg="blue", width=20,
                 command=pushEnd)
 btnExit = Button(btnframe, text='退出程序', fg="red", width=20,
                 command=root.destroy)
+
+cc = Cac(chstr, constin)
 
 lb.grid()
 lb2.grid()
