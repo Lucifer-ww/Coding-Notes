@@ -10,12 +10,19 @@ import os
 #---------------------------check---------------------------
 class Cac(object):
     def __init__(self, index: str, commit: str):
+        index=index
+        commit=commit
+        pass
+    def check(self, index, commit):
+        #首先需要一个记录原来字符串长度和记录你输入的字符串长度的变量
+        indexlen = len(index)
+        commitlen = len(commit)
         pass
 #---------------------------check---------------------------
 
 
-constin="" #输入汇总changliang
-
+constin=None #输入汇总changliang
+cyongshi=None #用时
 timestrS=datetime.utcnow()  # 时间记录器-first
 timestrLast=0  # 时间记录器-last
 
@@ -50,8 +57,10 @@ def pushEnd():
     timtmpe = fmmf.second+fmmf.minute*60
     #print("get timestamp this of->time.time()={0}".format(time.time()))
     #print("get timestamp minx of->timtmp={0}".format(timtmp))
-    timestrLast = timtmps - timtmpe
+    timestrLast = timtmpe - timtmps
     print("get timestamp end of->timestrLast={0}".format(timestrLast))
+    print("时间：{0}".format(timestrLast))
+    cyongshi = timestrLast
 
 
 # --------------------------------
@@ -125,4 +134,4 @@ btnExit.grid(row=4, column=2)
 # textTip.pack(fill=BOTH, expand=True, padx=3, pady=2)
 # textTip.insert(END, chstr)
 root.mainloop()
-print("时间：{0}".format(timestrLast))
+print("时间={0}".format(cyongshi))
