@@ -9,18 +9,27 @@ import os
 
 # ---------------------------check---------------------------
 
+#查看
 
-class Cac(object):
-    def __init__(self, index: str, commit: str):
-        index = index
-        commit = commit
-        pass
 
-    def check(self, index, commit):
-        # 首先需要一个记录原来字符串长度和记录你输入的字符串长度的变量
-        indexlen = len(index)
-        commitlen = len(commit)
-        pass
+def check(index:str, commit:str) -> list:
+    # 首先需要一个记录原来字符串长度
+    aclen = 0.0
+    celen = 0.0
+    zql = 0.0 #正确率
+    # 循环遍历
+    for i, j in zip(index, commit):
+        if i == j:
+            aclen += 1.0
+            print('aclen++, aclen={0}'.format(aclen))
+        else:
+            celen += 1.0
+            print('celen++, celen={0}'.format(celen))
+    zql = float(aclen / 50) * 100.0
+    print('zql={0}'.format(zql))
+
+    ainfo = [zql, aclen, celen]
+    return ainfo
 # ---------------------------check---------------------------
 
 
@@ -28,6 +37,7 @@ constin = None  # 输入汇总changliang
 cyongshi = None  # 用时
 timestrS = datetime.utcnow()  # 时间记录器-first
 timestrLast = 0  # 时间记录器-last
+chstr = None
 
 ft = r"E:\ProgramThomas\Coding-Notes\Project\PYT\打字游戏Python的GUI界面\resource\loggerstr.log"
 '''
@@ -50,6 +60,16 @@ def pushStart():
     # timestrS=time.time()
     timestrS = datetime.utcnow()
     print("get timestamp start of->timestrS={0}".format(timestrS))
+'''
+def itg(chstr, constin):
+    #"时间:"+str(cyongshi)+'秒'
+    ccList = check(chstr, constin)
+    endstr = "时间:" + str(cyongshi) + '秒' + '\n'
+    endstr += '正确率:' + str(ccList[0]) + '\n'
+    endstr += '对了:' + str(ccList[1]) + '个\n'
+    endstr += '错了:' + str(ccList[2]) + '个\n'
+    return endstr
+'''
 
 
 def pushEnd():
@@ -67,8 +87,13 @@ def pushEnd():
     print("时间：{0}".format(timestrLast))
     cyongshi = timestrLast
 
+    ccList = check(chstr, constin)
+    endstr = "时间:" + str(cyongshi) + '秒' + '\n'
+    endstr += '正确率:' + str(ccList[0]) + '\n'
+    endstr += '对了:' + str(ccList[1]) + '个\n'
+    endstr += '错了:' + str(ccList[2]) + '个\n'
     #PHOTO IMAGE
-    lbot = Label(root, width=50, text="时间:"+str(cyongshi),
+    lbot = Label(root, width=50, text=endstr,
              #bitmap='',
              compound='left',
              anchor=SW,
@@ -129,7 +154,7 @@ btnEnd = Button(btnframe, text="输入结束", fg="blue", width=20,
 btnExit = Button(btnframe, text='退出程序', fg="red", width=20,
                  command=root.destroy)
 
-cc = Cac(chstr, constin)  # class init to cc var
+#cc = Cac(chstr, constin)   class init to cc var
 
 
 lb.grid()
