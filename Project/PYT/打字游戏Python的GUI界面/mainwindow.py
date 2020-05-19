@@ -67,6 +67,7 @@ intxt.grid(row=3, column=1) #输入框Entry th
 
 instr=getStr(intxt)
 print(instr)
+fff.write("\n"+instr)
 # textTip = Text(root)
 # textTip.pack(fill=BOTH, expand=True, padx=3, pady=2)
 # textTip.insert(END, chstr)
