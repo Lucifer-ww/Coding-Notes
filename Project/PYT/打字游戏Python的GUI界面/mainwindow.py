@@ -7,24 +7,27 @@ import time
 from datetime import datetime
 import os
 
-#---------------------------check---------------------------
+# ---------------------------check---------------------------
+
+
 class Cac(object):
     def __init__(self, index: str, commit: str):
-        index=index
-        commit=commit
+        index = index
+        commit = commit
         pass
+
     def check(self, index, commit):
-        #首先需要一个记录原来字符串长度和记录你输入的字符串长度的变量
+        # 首先需要一个记录原来字符串长度和记录你输入的字符串长度的变量
         indexlen = len(index)
         commitlen = len(commit)
         pass
-#---------------------------check---------------------------
+# ---------------------------check---------------------------
 
 
-constin=None #输入汇总changliang
-cyongshi=None #用时
-timestrS=datetime.utcnow()  # 时间记录器-first
-timestrLast=0  # 时间记录器-last
+constin = None  # 输入汇总changliang
+cyongshi = None  # 用时
+timestrS = datetime.utcnow()  # 时间记录器-first
+timestrLast = 0  # 时间记录器-last
 
 ft = r"E:\ProgramThomas\Coding-Notes\Project\PYT\打字游戏Python的GUI界面\resource\loggerstr.log"
 '''
@@ -35,21 +38,23 @@ def msgShow():
 
 
 def getStr(ent):
+    global constin
     # 返回Entry的值
     tmp = ent.get()
     print("输入：{0}".format(tmp))
     fff.write("\n"+tmp)
-    constin=tmp
+    constin = tmp
 
 
 def pushStart():
-    #timestrS=time.time()
+    # timestrS=time.time()
     timestrS = datetime.utcnow()
     print("get timestamp start of->timestrS={0}".format(timestrS))
 
 
 def pushEnd():
     getStr(intxt)
+    global cyongshi
     #fmmf = time.time()
     fmmf = datetime.utcnow()
     #timtmp = fmmf - timestrS
@@ -61,6 +66,13 @@ def pushEnd():
     print("get timestamp end of->timestrLast={0}".format(timestrLast))
     print("时间：{0}".format(timestrLast))
     cyongshi = timestrLast
+
+    #PHOTO IMAGE
+    lbot = Label(root, width=50, text="时间:"+str(cyongshi),
+             compound='left',
+             anchor=SW,
+             bg='skyblue')
+    lbot.grid()
 
 
 # --------------------------------
@@ -114,9 +126,10 @@ btnStart = Button(btnframe, text="开始输入", fg="blue", width=20,
 btnEnd = Button(btnframe, text="输入结束", fg="blue", width=20,
                 command=pushEnd)
 btnExit = Button(btnframe, text='退出程序', fg="red", width=20,
-                command=root.destroy)
+                 command=root.destroy)
 
-cc = Cac(chstr, constin)
+cc = Cac(chstr, constin)  # class init to cc var
+
 
 lb.grid()
 lb2.grid()
@@ -126,9 +139,13 @@ intxtL.grid(row=3, column=0, sticky=W)  # 输入>Label
 intxt.grid(row=3, column=1)  # 输入框Entry th
 btnframe.grid()
 
+
 btnStart.grid(row=4, column=0)
 btnEnd.grid(row=4, column=1)
 btnExit.grid(row=4, column=2)
+
+
+#lbot.grid()
 
 # textTip = Text(root)
 # textTip.pack(fill=BOTH, expand=True, padx=3, pady=2)
