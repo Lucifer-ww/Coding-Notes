@@ -32,7 +32,9 @@ def pushStart():
 
 def pushEnd():
     getStr(intxt)
-    timtmp = time.time() - timestrS
+    fmmf = time.time()
+    timtmp = (fmmf - timestrS)
+    print("get timestamp this of->time.time()={0}".format(time.time()))
     print("get timestamp minx of->timtmp={0}".format(timtmp))
     timestrLast = int(timtmp)
     print("get timestamp end of->timestrLast={0}".format(timestrLast))
