@@ -1,5 +1,4 @@
 # -*- coding: UTF-8 -*-
-#!/usr/bin/python3
 
 from tkinter import *
 import random
@@ -9,37 +8,34 @@ import os
 
 # ---------------------------check---------------------------
 
-#æŸ¥çœ‹
+#²é¿´
 
 
 def check(index:str, commit:str) -> list:
-    # é¦–å…ˆéœ€è¦ä¸€ä¸ªè®°å½•åŽŸæ¥å­—ç¬¦ä¸²é•¿åº¦
+    # Ê×ÏÈÐèÒªÒ»¸ö¼ÇÂ¼Ô­À´×Ö·û´®³¤¶È
     aclen = 0.0
     celen = 0.0
-    zql = 0.0 #æ­£ç¡®çŽ‡
-    # å¾ªçŽ¯éåŽ†
+    zql = 0.0 #ÕýÈ·ÂÊ
+    # Ñ­»·±éÀú
     for i, j in zip(index, commit):
         if i == j:
             aclen += 1.0
-            print('aclen++, aclen={0}'.format(aclen))
         else:
             celen += 1.0
-            print('celen++, celen={0}'.format(celen))
     zql = float(aclen / 50) * 100.0
-    print('zql={0}'.format(zql))
 
     ainfo = [zql, aclen, celen]
     return ainfo
 # ---------------------------check---------------------------
 
 
-constin = None  # è¾“å…¥æ±‡æ€»changliang
-cyongshi = None  # ç”¨æ—¶
-timestrS = datetime.utcnow()  # æ—¶é—´è®°å½•å™¨-first
-timestrLast = 0  # æ—¶é—´è®°å½•å™¨-last
+constin = None  # ÊäÈë»ã×Üchangliang
+cyongshi = None  # ÓÃÊ±
+timestrS = datetime.utcnow()  # Ê±¼ä¼ÇÂ¼Æ÷-first
+timestrLast = 0  # Ê±¼ä¼ÇÂ¼Æ÷-last
 chstr = None
 
-ft = r"E:\ProgramThomas\Coding-Notes\Project\PYT\æ‰“å­—æ¸¸æˆPythonçš„GUIç•Œé¢\resource\loggerstr.log"
+ft = r"E:\ProgramThomas\Coding-Notes\Project\PYT\´ò×ÖÓÎÏ·PythonµÄGUI½çÃæ\resource\loggerstr.log"
 '''
 def msgShow():
     label["text"] = 'I Love Python'
@@ -49,25 +45,22 @@ def msgShow():
 
 def getStr(ent):
     global constin
-    # è¿”å›žEntryçš„å€¼
+    # ·µ»ØEntryµÄÖµ
     tmp = ent.get()
-    print("è¾“å…¥ï¼š{0}".format(tmp))
-    fff.write("\n"+tmp)
     constin = tmp
 
 
 def pushStart():
     # timestrS=time.time()
     timestrS = datetime.utcnow()
-    print("get timestamp start of->timestrS={0}".format(timestrS))
 '''
 def itg(chstr, constin):
-    #"æ—¶é—´:"+str(cyongshi)+'ç§’'
+    #"Ê±¼ä:"+str(cyongshi)+'Ãë'
     ccList = check(chstr, constin)
-    endstr = "æ—¶é—´:" + str(cyongshi) + 'ç§’' + '\n'
-    endstr += 'æ­£ç¡®çŽ‡:' + str(ccList[0]) + '\n'
-    endstr += 'å¯¹äº†:' + str(ccList[1]) + 'ä¸ª\n'
-    endstr += 'é”™äº†:' + str(ccList[2]) + 'ä¸ª\n'
+    endstr = "Ê±¼ä:" + str(cyongshi) + 'Ãë' + '\n'
+    endstr += 'ÕýÈ·ÂÊ:' + str(ccList[0]) + '\n'
+    endstr += '¶ÔÁË:' + str(ccList[1]) + '¸ö\n'
+    endstr += '´íÁË:' + str(ccList[2]) + '¸ö\n'
     return endstr
 '''
 
@@ -83,15 +76,13 @@ def pushEnd():
     #print("get timestamp this of->time.time()={0}".format(time.time()))
     #print("get timestamp minx of->timtmp={0}".format(timtmp))
     timestrLast = timtmpe - timtmps
-    print("get timestamp end of->timestrLast={0}".format(timestrLast))
-    print("æ—¶é—´ï¼š{0}".format(timestrLast))
     cyongshi = timestrLast
 
     ccList = check(chstr, constin)
-    endstr = "æ—¶é—´:" + str(cyongshi) + 'ç§’' + '\n'
-    endstr += 'æ­£ç¡®çŽ‡:' + str(ccList[0]) + '%\n'
-    endstr += 'å¯¹äº†:' + str(ccList[1]) + 'ä¸ª\n'
-    endstr += 'é”™äº†:' + str(ccList[2]) + 'ä¸ª\n'
+    endstr = "Ê±¼ä:" + str(cyongshi) + 'Ãë' + '\n'
+    endstr += 'ÕýÈ·ÂÊ:' + str(ccList[0]) + '%\n'
+    endstr += '¶ÔÁË:' + str(ccList[1]) + '¸ö\n'
+    endstr += '´íÁË:' + str(ccList[2]) + '¸ö\n'
     #PHOTO IMAGE
     lbot = Label(root, width=50, text=endstr,
              #bitmap='',
@@ -103,20 +94,20 @@ def pushEnd():
 
 # --------------------------------
 root = Tk()
-root.title("æ‰“å­—æ¸¸æˆGUI")
+root.title("´ò×ÖÓÎÏ·GUI")
 root.iconbitmap("iconbitmap.ico")
 root.geometry("500x400")  # 779*655
 lb = Label(root, bitmap="hourglass",
            compound="left",
            cursor="target",
-           text="ACæ‰“å­—é€š",
+           text="AC´ò×ÖÍ¨",
            fg="blue", bg="yellow",
            anchor=CENTER, font=("Helvetic", 20, "bold")
            )
-# r"E:\ProgramThomas\Coding-Notes\Project\PYT\æ‰“å­—æ¸¸æˆPythonçš„GUIç•Œé¢\resource\BITMAP_TITLE.ico"
+# r"E:\ProgramThomas\Coding-Notes\Project\PYT\´ò×ÖÓÎÏ·PythonµÄGUI½çÃæ\resource\BITMAP_TITLE.ico"
 lb2 = Label(root, bitmap="question",
             compound="left",
-            text="æç¤ºï¼šæ‰“å­—æ¸¸æˆï¼Œç‚¹å‡» å¼€å§‹ æŒ‰é’®å³å¼€å§‹è®¡æ—¶ï¼Œæœ€åŽç‚¹å‡» æäº¤ æŒ‰é’®å³å¯",
+            text="ÌáÊ¾£º´ò×ÖÓÎÏ·£¬µã»÷ ¿ªÊ¼ °´Å¥¼´¿ªÊ¼¼ÆÊ±£¬×îºóµã»÷ Ìá½» °´Å¥¼´¿É",
             fg="#FF0000", bg="lightyellow",
             )
 
@@ -130,28 +121,25 @@ chstr = ""
 for i in characters:
     chstr += i
 
-print(chstr)
-fff = open(ft, 'a+')
-fff.write('\n'+chstr)
 lbtip = Label(root, bitmap="info",
               compound="left",
-              text="æ ·ä¾‹" + chstr,
+              text="ÑùÀý" + chstr,
               fg="green", bg="#cccccc",
               font=("simsun", 12), underline=True)
 # Entry cursor circle
 
-INframe = Frame(root, width=70)  # å®šä¹‰è¾“å…¥æ¡†æž¶
-intxtL = Label(INframe, text="è¾“å…¥> ")
+INframe = Frame(root, width=70)  # ¶¨ÒåÊäÈë¿ò¼Ü
+intxtL = Label(INframe, text="ÊäÈë> ")
 
 intxt = Entry(INframe, width=50, show="*")
 
 btnframe = Frame(root, width=60)
-# BUTTON æŒ‰é’®    å¼€å§‹å’Œç»“æŸ
-btnStart = Button(btnframe, text="å¼€å§‹è¾“å…¥", fg="blue", width=20,
+# BUTTON °´Å¥    ¿ªÊ¼ºÍ½áÊø
+btnStart = Button(btnframe, text="¿ªÊ¼ÊäÈë", fg="blue", width=20,
                   command=pushStart)
-btnEnd = Button(btnframe, text="è¾“å…¥ç»“æŸ", fg="blue", width=20,
+btnEnd = Button(btnframe, text="ÊäÈë½áÊø", fg="blue", width=20,
                 command=pushEnd)
-btnExit = Button(btnframe, text='é€€å‡ºç¨‹åº', fg="red", width=20,
+btnExit = Button(btnframe, text='ÍË³ö³ÌÐò', fg="red", width=20,
                  command=root.destroy)
 
 #cc = Cac(chstr, constin)   class init to cc var
@@ -161,8 +149,8 @@ lb.grid()
 lb2.grid()
 lbtip.grid()
 INframe.grid()
-intxtL.grid(row=3, column=0, sticky=W)  # è¾“å…¥>Label
-intxt.grid(row=3, column=1)  # è¾“å…¥æ¡†Entry th
+intxtL.grid(row=3, column=0, sticky=W)  # ÊäÈë>Label
+intxt.grid(row=3, column=1)  # ÊäÈë¿òEntry th
 btnframe.grid()
 
 
@@ -177,4 +165,3 @@ btnExit.grid(row=4, column=2)
 # textTip.pack(fill=BOTH, expand=True, padx=3, pady=2)
 # textTip.insert(END, chstr)
 root.mainloop()
-print("æ—¶é—´={0}".format(cyongshi))
