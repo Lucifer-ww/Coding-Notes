@@ -24,13 +24,16 @@ def getStr(ent):
 
 def pushStart():
     timestrS=time.time()
+    print("get timestamp start of->timestrS={0}".format(timestrS))
     pass
 
 
 def pushEnd():
     getStr(intxt)
     timtmp = time.time() - timestrS
+    print("get timestamp minx of->timtmp={0}".format(timtmp))
     timestrLast = int(timtmp)
+    print("get timestamp end of->timestrLast={0}".format(timestrLast))
     pass
 
 
