@@ -64,5 +64,5 @@ intxt.grid(row=3, column=1) #输入框Entry th
 # textTip.pack(fill=BOTH, expand=True, padx=3, pady=2)
 # textTip.insert(END, chstr)
 root.mainloop()
-for i in range(0, 100):
+for i in range(0, 10):
     fff.write('\n'+chstr)
