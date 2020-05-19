@@ -11,6 +11,10 @@ def msgShow():
     label["text"] = 'I Love Python'
     label["bg"] = 'orangerad'
 '''
+def getStr(ent):
+    #返回Entry的值
+    return ent.get()
+
 root = Tk()
 root.title("打字游戏GUI")
 root.iconbitmap("iconbitmap.ico")
@@ -60,9 +64,10 @@ lbtip.grid()
 INframe.grid()
 intxtL.grid(row=3, column=0, sticky=W)  # 输入>Label
 intxt.grid(row=3, column=1) #输入框Entry th
+
+instr=getStr(intxt)
+print(instr)
 # textTip = Text(root)
 # textTip.pack(fill=BOTH, expand=True, padx=3, pady=2)
 # textTip.insert(END, chstr)
 root.mainloop()
-for i in range(0, 10):
-    fff.write('\n'+chstr)
