@@ -49,15 +49,17 @@ lbtip = Label(root, bitmap="info",
               font=("simsun", 12), underline=True)
 # Entry cursor circle
 
-intxtL = Label(root, text="输入> ")
+INframe=Frame(root, width=70) #定义输入框架
+intxtL = Label(INframe, text="输入> ")
 
-intxt = Entry(root, show="*")
+intxt = Entry(INframe, width=50)
 
 lb.grid()
 lb2.grid()
 lbtip.grid()
-intxtL.grid(row=3, column=0)
-intxt.grid(row=3,column=0)
+INframe.grid()
+intxtL.grid(row=3, column=0, sticky=W)  # 输入>Label
+intxt.grid(row=3, column=1) #输入框Entry th
 # textTip = Text(root)
 # textTip.pack(fill=BOTH, expand=True, padx=3, pady=2)
 # textTip.insert(END, chstr)
