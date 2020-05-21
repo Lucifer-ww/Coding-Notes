@@ -7,6 +7,7 @@ import time
 from datetime import datetime
 import os
 
+
 def getRandom_str():
     characters = []  # 0~26
     for i in range(0, 50):
@@ -21,14 +22,14 @@ def getRandom_str():
 
 # ---------------------------check---------------------------
 
-#查看
+# 查看
 
 
-def check(index:str, commit:str) -> list:
+def check(index: str, commit: str) -> list:
     # 首先需要一个记录原来字符串长度
     aclen = 0.0
     celen = 0.0
-    zql = 0.0 #正确率
+    zql = 0.0  # 正确率
     # 循环遍历
     for i, j in zip(index, commit):
         if i == j:
@@ -69,15 +70,24 @@ def getStr(ent):
 
 def pushStart():
     # timestrS=time.time()
+    global timestrS
     timestrS = datetime.utcnow()
     print("get timestamp start of->timestrS={0}".format(timestrS))
-    #rebtn.grid_forget()
+    # rebtn.grid_forget()
+
 
 def reinfo():
     intxt.delete(0, END)
-    #lbot.config(text='')
+    # lbot.config(text='')
     lbot.grid_forget()
     rebtn.grid_forget()
+    timestrS = None
+    timestrLast = None
+    chstr = getRandom_str()
+    lbtip.configure(text="样例" + chstr)
+
+
+    # lbtip.grid()
 '''
 def itg(chstr, constin):
     #"时间:"+str(cyongshi)+'秒'
@@ -90,7 +100,8 @@ def itg(chstr, constin):
 '''
 
 
-def pushEnd(self):
+def pushEnd():
+    copy_.grid_forget()
     getStr(intxt)
     global cyongshi
     #fmmf = time.time()
@@ -111,32 +122,35 @@ def pushEnd(self):
     endstr += '正确率:' + str(ccList[0]) + '%\n'
     endstr += '对了:' + str(ccList[1]) + '个\n'
     endstr += '错了:' + str(ccList[2]) + '个\n'
-    #PHOTO IMAGE
+    # PHOTO IMAGE
     lbot.configure(width=60, text=endstr,
-                 #bitmap='',
-                 compound='left',
-                 anchor=SW,
-                 bg='skyblue',
-                 justify='left')
+                   # bitmap='',
+                   compound='left',
+                   anchor=SW,
+                   bg='skyblue',
+                   justify='left')
     rebtn.configure(text='重新开始？', bg='#EA5529',
-                   fg='#FFCCCC', command=reinfo, font=('microsoft YAHEI', 13, 'normal'))
+                    fg='#FFCCCC', command=reinfo, font=('microsoft YAHEI', 13, 'normal'))
     # out
     lbot.grid()
     rebtn.grid()
+    copy_.grid(row=7, column=0)
+
 
 def pushEND_FUN(self):
-    pushEnd(self)
+    pushEnd()
+
 
 # --------------------------------
 root = Tk()
 #root.state('zoomed')
 root.title("打字游戏1.2.7")
 root.iconbitmap("iconbitmap.ico")
-root.geometry("500x400")  # 779*655
+#root.geometry("500x400")  # 779*655
 lb = Label(root, bitmap="hourglass",
            compound="left",
            cursor="target",
-           text="霹雳⚡打字通",
+           text="霹雳⚡-💻打字通⌨",
            fg="blue", bg="yellow",
            anchor=CENTER, font=("Helvetic", 20, "bold")
            )
@@ -146,9 +160,13 @@ lb2 = Label(root, bitmap="question",
             text="提示：打字游戏，点击 开始 按钮即开始计时，最后点击 提交 按钮即可",
             fg="#FF0000", bg="lightyellow",
             )
+#copy_F = Frame(root)
+copy_ = Label(root, text='Copyright(C)2020/5 by Thomas\nE-mail:3392446642@qq.com',
+              bg='lavender')
+# beiy: -> : , padx=20, pady=10
 
-#生成随机字符串已经转移到函数
-chstr= getRandom_str()
+# 生成随机字符串已经转移到函数
+chstr = getRandom_str()
 
 print(chstr)
 lbtip = Label(root, bitmap="info",
@@ -168,13 +186,14 @@ btnframe = Frame(root, width=60)
 btnStart = Button(btnframe, text="开始输入", fg="blue", width=20,
                   command=pushStart)
 btnEnd = Button(btnframe, text="输入结束", fg="blue", width=20,
-                command=pushEND_FUN)
+                command=pushEnd)
 btnExit = Button(btnframe, text='退出程序', fg="red", width=20,
                  command=root.destroy)
+
 lbot = Label(root)
 rebtn = Button(root)
 
-#cc = Cac(chstr, constin)   class init to cc var
+# cc = Cac(chstr, constin)   class init to cc var
 
 
 lb.grid()
@@ -190,10 +209,13 @@ btnStart.grid(row=4, column=0)
 btnEnd.grid(row=4, column=1)
 btnExit.grid(row=4, column=2)
 #root.bind('<Return>', pushEnd)
-intxt.bind('<Return>', pushEND_FUN)
+
+copy_.grid(row=5, column=0)
+
+root.bind('<Return>', pushEND_FUN)
 
 
-#lbot.grid()
+# lbot.grid()
 
 # textTip = Text(root)
 # textTip.pack(fill=BOTH, expand=True, padx=3, pady=2)
