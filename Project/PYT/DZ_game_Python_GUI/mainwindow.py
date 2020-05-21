@@ -52,7 +52,6 @@ def getStr(ent):
     # 返回Entry的值
     tmp = ent.get()
     print("输入：{0}".format(tmp))
-    fff.write("\n"+tmp)
     constin = tmp
 
 
@@ -131,8 +130,6 @@ for i in characters:
     chstr += i
 
 print(chstr)
-fff = open(ft, 'a+')
-fff.write('\n'+chstr)
 lbtip = Label(root, bitmap="info",
               compound="left",
               text="样例" + chstr,
