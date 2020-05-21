@@ -7,6 +7,18 @@ import time
 from datetime import datetime
 import os
 
+def getRandom_str():
+    characters = []  # 0~26
+    for i in range(0, 50):
+        tmp = random.randint(0, 25)
+        characters.append(chr(ord('a') + tmp))
+
+    # print(characters)
+    chstr = ""
+    for i in characters:
+        chstr += i
+    return chstr
+
 # ---------------------------check---------------------------
 
 #查看
@@ -59,6 +71,13 @@ def pushStart():
     # timestrS=time.time()
     timestrS = datetime.utcnow()
     print("get timestamp start of->timestrS={0}".format(timestrS))
+    #rebtn.grid_forget()
+
+def reinfo():
+    intxt.delete(0, END)
+    #lbot.config(text='')
+    lbot.grid_forget()
+    rebtn.grid_forget()
 '''
 def itg(chstr, constin):
     #"时间:"+str(cyongshi)+'秒'
@@ -71,7 +90,7 @@ def itg(chstr, constin):
 '''
 
 
-def pushEnd():
+def pushEnd(self):
     getStr(intxt)
     global cyongshi
     #fmmf = time.time()
@@ -93,26 +112,31 @@ def pushEnd():
     endstr += '对了:' + str(ccList[1]) + '个\n'
     endstr += '错了:' + str(ccList[2]) + '个\n'
     #PHOTO IMAGE
-    lbot = Label(root, width=60, text=endstr,
-             #bitmap='',
-             compound='left',
-             anchor=SW,
-             bg='skyblue',
-             justify='left')
-    rebtn = Button()
+    lbot.configure(width=60, text=endstr,
+                 #bitmap='',
+                 compound='left',
+                 anchor=SW,
+                 bg='skyblue',
+                 justify='left')
+    rebtn.configure(text='重新开始？', bg='#EA5529',
+                   fg='#FFCCCC', command=reinfo, font=('microsoft YAHEI', 13, 'normal'))
+    # out
     lbot.grid()
+    rebtn.grid()
 
+def pushEND_FUN(self):
+    pushEnd(self)
 
 # --------------------------------
 root = Tk()
 #root.state('zoomed')
-root.title("打字游戏GUI")
+root.title("打字游戏1.2.7")
 root.iconbitmap("iconbitmap.ico")
 root.geometry("500x400")  # 779*655
 lb = Label(root, bitmap="hourglass",
            compound="left",
            cursor="target",
-           text="AC打字通",
+           text="霹雳⚡打字通",
            fg="blue", bg="yellow",
            anchor=CENTER, font=("Helvetic", 20, "bold")
            )
@@ -123,15 +147,8 @@ lb2 = Label(root, bitmap="question",
             fg="#FF0000", bg="lightyellow",
             )
 
-characters = []  # 0~26
-for i in range(0, 50):
-    tmp = random.randint(0, 25)
-    characters.append(chr(ord('a') + tmp))
-
-# print(characters)
-chstr = ""
-for i in characters:
-    chstr += i
+#生成随机字符串已经转移到函数
+chstr= getRandom_str()
 
 print(chstr)
 lbtip = Label(root, bitmap="info",
@@ -151,9 +168,11 @@ btnframe = Frame(root, width=60)
 btnStart = Button(btnframe, text="开始输入", fg="blue", width=20,
                   command=pushStart)
 btnEnd = Button(btnframe, text="输入结束", fg="blue", width=20,
-                command=pushEnd)
+                command=pushEND_FUN)
 btnExit = Button(btnframe, text='退出程序', fg="red", width=20,
                  command=root.destroy)
+lbot = Label(root)
+rebtn = Button(root)
 
 #cc = Cac(chstr, constin)   class init to cc var
 
@@ -170,6 +189,8 @@ btnframe.grid()
 btnStart.grid(row=4, column=0)
 btnEnd.grid(row=4, column=1)
 btnExit.grid(row=4, column=2)
+#root.bind('<Return>', pushEnd)
+intxt.bind('<Return>', pushEND_FUN)
 
 
 #lbot.grid()
