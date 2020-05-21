@@ -87,21 +87,25 @@ def pushEnd():
     cyongshi = timestrLast
 
     ccList = check(chstr, constin)
-    endstr = "时间:" + str(cyongshi) + '秒' + '\n'
+    endstr = '生成->' + chstr + '\n' + '输入->' + constin + '\n'
+    endstr += "时间:" + str(cyongshi) + '秒' + '\n'
     endstr += '正确率:' + str(ccList[0]) + '%\n'
     endstr += '对了:' + str(ccList[1]) + '个\n'
     endstr += '错了:' + str(ccList[2]) + '个\n'
     #PHOTO IMAGE
-    lbot = Label(root, width=50, text=endstr,
+    lbot = Label(root, width=60, text=endstr,
              #bitmap='',
              compound='left',
              anchor=SW,
-             bg='skyblue')
+             bg='skyblue',
+             justify='left')
+    rebtn = Button()
     lbot.grid()
 
 
 # --------------------------------
 root = Tk()
+#root.state('zoomed')
 root.title("打字游戏GUI")
 root.iconbitmap("iconbitmap.ico")
 root.geometry("500x400")  # 779*655
