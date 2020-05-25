@@ -77,6 +77,7 @@ def pushStart():
 
 
 def reinfo():
+    global chstr
     intxt.delete(0, END)
     # lbot.config(text='')
     lbot.grid_forget()
@@ -144,13 +145,13 @@ def pushEND_FUN(self):
 # --------------------------------
 root = Tk()
 #root.state('zoomed')
-root.title("打字游戏1.2.7")
+root.title("打字游戏1.3.1")
 root.iconbitmap("iconbitmap.ico")
 #root.geometry("500x400")  # 779*655
 lb = Label(root, bitmap="hourglass",
            compound="left",
            cursor="target",
-           text="霹雳⚡-💻打字通⌨",
+           text="霹雳⚡-打字通⌨",
            fg="blue", bg="yellow",
            anchor=CENTER, font=("Helvetic", 20, "bold")
            )
