@@ -12,7 +12,7 @@
 2、help：呼出此页面\n3、exit：退出\n4、show：显示所有记录\n5、cls/clear：清屏\n6、delete：删除某项\n实例：\n>>> delete\n输入你要删除的编号：2\n删除完成！\n-----------------\n按下任意键继续......\n"
 
 
-#define ConstHelpInline ""
+#define ConstHelpInline "***"
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 using namespace std;
 int cnt = 0;
@@ -49,7 +49,7 @@ public:
 		cout << "输入用户名：";
 		//getline(cin, ac);
 		//gets(cca);
-		scanf("%s", &cca);
+		scanf("%s", cca);
 		printf("输入密码：");
 		//getline(cin, password, '\n');
 		//gets(ccap);
