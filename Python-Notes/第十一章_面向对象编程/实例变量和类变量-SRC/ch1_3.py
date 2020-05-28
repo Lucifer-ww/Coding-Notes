@@ -6,6 +6,7 @@ author: Thomaslk
 Create Date: 2020-05-25
 note: 文章配套代码，认识类变量
 '''
+#ch1_3.py
 
 class Account:
     """定义银行账户类"""
