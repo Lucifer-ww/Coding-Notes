@@ -1,0 +1,5 @@
+# set-package from,__init__,python
++site-package --- matplotlib
++site-package --- numpy
+
+//run
