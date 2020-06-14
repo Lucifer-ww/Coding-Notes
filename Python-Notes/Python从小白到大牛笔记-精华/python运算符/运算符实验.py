@@ -1,0 +1,11 @@
+# coding = UTF-8
+a = 10
+b = 21
+print("a + b = ", a + b)
+print("a - b = ", a - b)
+print("a * b = ", a * b)
+print("a / b = ", a / b)
+print("a % b = ", a % b)
+print("a ** b = ", a ** b)
+print("9 // 2 = ", 9 // 2)
+print("-9 // 2 = ", -9 / 2)
