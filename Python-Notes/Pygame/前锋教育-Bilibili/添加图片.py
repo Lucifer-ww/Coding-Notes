@@ -1,3 +1,11 @@
+'''
+@Author: thomas
+@Date: 2020-06-14 14:11:25
+@LastEditTime: 2020-06-14 18:23:32
+@LastEditors: Please set LastEditors
+@Description: Pygame添加图片
+@FilePath: \Coding-Notes\Python-Notes\Pygame\前锋教育-Bilibili\添加图片.py
+'''
 # __author__=="thomas"
 import pygame
 pygame.init()
@@ -31,3 +39,5 @@ while flag:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			exit()
+
+            
