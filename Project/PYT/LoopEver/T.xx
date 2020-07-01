@@ -1,0 +1,108 @@
+import tkinter as tk#这个语句导入tkinter模块，但为方便，为它定义了一个别名tk。
+import time#导入time模块后，我们就有了变量time指向该模块，利用time这个变量，就可以访问time模块的所有功能。
+import tkinter.messagebox  #messagebox是普通windows编程中经常用到的，目的是显示个信息框
+import base64//要将编码之后的图片数据解码并保存为图片
+import os//我们删除图片，这个要添加进来
+from main_w_gif import img as socket_one     //接下来就是在文件中导入你刚刚生成的xxx.py文件，因为每个图片文件里面都是img变量，所以导入的时候可以用别名，这是python的基本用法了，不再多说。
+from not_gif import img as socket_two
+from sure_gif import img as socket_three
+
+tmp = open('socket_one.gif', 'wb')      //这是解码。保存图片
+tmp.write(base64.b64decode(socket_one))
+
+tmp = open('socket_two.gif', 'wb')
+tmp.write(base64.b64decode(socket_two))
+
+tmp = open('socket_three.gif', 'wb')
+tmp.write(base64.b64decode(socket_three))
+
+tmp.close()#现在就能用了，用完（加载到程序里之后）
+
+"""我们编写的Python代码会调用内置的Tkinter，Tkinter封装了访问Tk的接口；Tk是一个图形库，支持多个操作系统，使用Tcl语言开发；Tk会调用操作系统提供的本地GUI接口，完成最终的GUI。所以，我们的代码只需要调用Tkinter提供的接口就可以了tkinter的两种写法，这两种写法是有区别的，第一种，使用就需要加类名，也就是需要加tkinter，  第二种，已经把tkinter完全导入了，你不用管调用的是哪个类，只管使用就可以了。所以不需要加类名。#法1：import tkinterwin=tkinter.Tk()win.mainloop()#法2：from tkinter import *win=Tk()"""
+
+window = tk.Tk()
+# 设置主窗口大小
+window.geometry('450x400')
+# 设置主窗口标题
+window.title('你是不是比较蠢')
+
+
+def closeWindow():
+
+    tkinter.messagebox.showerror(title='别嘛',message='还没回答呢！')  #错误消息框
+
+    return
+
+window.protocol('WM_DELETE_WINDOW', closeWindow)
+
+# 设置文字
+lable1 = tk.Label(window, text="hey,xxx") #, font=("Arial", 14)
+lable2 = tk.Label(window, text="你是不是傻子?") #, font=("Arial", 34)
+# 设置图片
+photo = tk.PhotoImage(file='./socket_one.gif')
+imgLabel = tk.Label(window, imag=photo)
+# 调用tkinter的布局管理模块
+lable1.pack()
+lable2.pack()
+imgLabel.pack()
+
+photo1 = tk.PhotoImage(file='./socket_two.gif')#不能放在love里面   由于垃圾回收机制造成的问题.当运行离开 create_new_demo() 作用域后,里面的 myimg 对象 被认为之后再也用不到.所以被垃圾回收机制给处理了.
+photo2 = tk.PhotoImage(file='./socket_three.gif')
+
+# 点击喜欢的操作
+def Love():
+    love = tk.Toplevel(window)
+    love.geometry('400x220')
+    love.title("好巧,我也这么认为")
+    lable = tk.Label(love,text="好巧,我也这么认为") #, font=("Arial", 24)
+
+    imgLabel1 = tk.Label(love, imag=photo1)
+    imgLabel1.pack()
+
+    btn = tk.Button(love, text="确定",width=30, height=2)
+    btn.config(command=lambda :closelove(love))
+    lable.pack()
+    love.protocol('WM_DELETE_WINDOW', closeall)
+    btn.pack()
+
+# 点击不喜欢的操作
+def NoLove():
+    no_love = tk.Toplevel(window)
+    no_love.geometry('350x330')
+    no_love.title("再考虑考虑呗")
+    lable = tk.Label(no_love,text="再考虑考虑呗") #, font=("Arial", 24)
+
+    imgLabel2 = tk.Label(no_love, imag=photo2)
+    imgLabel2.pack()
+
+    btn = tk.Button(no_love, text="确定",width=30, height=2)
+    btn.config(command=lambda :closenolove(no_love))
+    lable.pack()
+    btn.pack()
+# 子窗口关闭操作
+def closeall():
+    window.destroy()
+
+def closelove(love):
+    window.destroy()
+
+def closenolove(no_love):
+    no_love.destroy()
+
+
+
+# 设置按钮
+btn1 = tk.Button(window, text=" 是 ",width=30, height=2)
+# 配置按钮
+btn1.config(command=Love)
+btn2 = tk.Button(window, text="不是",width=30, height=2)
+btn2.config(command=NoLove)
+# 调用tkinter的布局管理模块
+btn1.pack()
+btn2.pack()
+
+window.mainloop()
+"""window.mainloop就会让window不断的刷新，如果没有mainloop,就是一个静态的window,传入进去的值就不会有循环，mainloop就相当于一个很大的while循环，有个while，每点击一次就会更新一次，所以我们必须要有循环   所以的窗口文件都必须有类似的mainloop   mainloop是窗口文件的关键的关键的关键。"""
+os.remove('socket_one.gif')//删除图片
+os.remove('socket_two.gif')
+os.remove('socket_three.gif')
