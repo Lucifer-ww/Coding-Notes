@@ -1,8 +1,6 @@
-# :sunny:Thomas编程:sunny:分享知识，获得快乐！:smile_cat:
+# :sunny:Thomas编程:sunny:分享知识，获得Star！:smile_cat:
 
-小王学习编程的笔记、心得:rocket:
-
-## :leaves:仓库内容简介
+Thomas学习编程的笔记、心得:rocket:
 
 ### C++
 
@@ -25,43 +23,10 @@
 + CSS样式
 + 后续更多更新……
 
-## :family:学习语言
-
-:cloud:主要学习的语言
-1. C++
-2. Python
-3. JS
-4. HTML
-
-:cloud:其次学习的语言
-
-1. Go
-2. Java
-3. C#
-
-:cloud:可能学习的语言
-
-1. CSS
-2. Bootstrap
-3. S
-4. ......
-
-## 编程历史
-
-❤2015年：学习我的世界turtle<br>
-❤2017年：学习C++<br>
-❤2019年6月：学习Python<br>
-❤2019年7月：注册Github<br>
-❤2020年1月学习前端<br>
-❤2020年1月：注册CSDN，6年级<br>
-❤2020年4月：LeetCode进入全站9万<br>
-
 ## 联系我？
-:e-mail:QQ邮箱<3392446642@qq.com><br>
-:e-mail:163邮箱<Thomaswang1h@163.com>
+:e-mail:邮箱<3392446642@qq.com>
 
 Github:<https://github.com/Github-Programer><br>
-QQ:<3392446642@qq><br>
 Gitee:<https://gitee.com/cc_wyh><br>
 知乎：<https://www.zhihu.com/people/Code365><br>
 博客园：<https://www.cnblogs.com/coding365>
@@ -75,4 +40,4 @@ Gitee:<https://gitee.com/cc_wyh><br>
 + 笔记内容大多是手敲，所以难免会有笔误，你可以帮我找错别字。
 + 很多知识点我可能没有涉及到，所以你可以对其他知识点进行补充。
 
-我们一起努力，一起学习加油，都拿offer！:muscle:
+一起学习加油:muscle:
