@@ -11,22 +11,25 @@ pygame.display.flip()
 y = 200
 x = 200
 r = 50
+flag = False
 while True:
     for event in pygame.event.get():
         # print(event)
         if event.type == pygame.QUIT:
             exit()
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            if event.type == pygame.MOUSEMOTION:
-                pygame.draw.circle(window, (255, 255, 255), (x, y), r)
-                print(event)
-                print(x, y)
-                x, y = event.pos
-                pygame.draw.circle(window, (255, 255, 0), (x, y), r)
+            flag = True
             pygame.draw.circle(window, (255, 255, 0), (x, y), r)
             pygame.display.update()
         elif event.type == pygame.MOUSEBUTTONUP:
+            flag = False
             pygame.draw.circle(window, (255, 255, 255), (x, y), r)
+            pygame.display.update()
+        if event.type == pygame.MOUSEMOTION and flag:
+            pygame.draw.circle(window, (255, 255, 255), (x, y), r)
+            print(event, flag)
+            x, y = event.pos
+            pygame.draw.circle(window, (255, 255, 0), (x, y), r)
             pygame.display.update()
         # elif event.type == pygame.MOUSEBUTTONDOWN:
         #     print("鼠标按下 ", event.pos)
