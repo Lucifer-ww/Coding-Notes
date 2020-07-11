@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+from tkinter.ttk import *
+from tkinter import *
 
 # 切片个数
 # 每个切片的占比
