@@ -1,4 +1,5 @@
 import pygame
+
 WIN_WIDTH = 400
 WIN_HEIGHT = 600
 pygame.init()
@@ -34,8 +35,9 @@ while True:
         # elif event.type == pygame.MOUSEBUTTONDOWN:
         #     print("鼠标按下 ", event.pos)
 
+        # 491 <Event(2-KeyDown {'unicode': '', 'key': 273, 'mod': 0, 'scancode': 72, 'window': None})>
+        # 492 <Event(3-KeyUp {'key': 273, 'mod': 0, 'scancode': 72, 'window': None})>
+        # 493 <Event(2-KeyDown {'unicode': '', 'key': 274, 'mod': 0, 'scancode': 80, 'window': None})>
+        # 494 <Event(3-KeyUp {'key': 274, 'mod': 0, 'scancode': 80, 'window': None})>
 
-# 491 <Event(2-KeyDown {'unicode': '', 'key': 273, 'mod': 0, 'scancode': 72, 'window': None})>
-# 492 <Event(3-KeyUp {'key': 273, 'mod': 0, 'scancode': 72, 'window': None})>
-# 493 <Event(2-KeyDown {'unicode': '', 'key': 274, 'mod': 0, 'scancode': 80, 'window': None})>
-# 494 <Event(3-KeyUp {'key': 274, 'mod': 0, 'scancode': 80, 'window': None})>
+
