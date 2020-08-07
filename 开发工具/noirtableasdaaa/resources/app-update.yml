@@ -1,0 +1,6 @@
+owner: notable
+repo: notable
+provider: github
+releaseType: release
+publishAutoUpdate: true
+updaterCacheDirName: notable-updater

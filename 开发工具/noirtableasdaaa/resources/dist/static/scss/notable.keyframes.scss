@@ -1,0 +1,23 @@
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-50%) rotate(-6deg);
+  }
+  30% {
+    transform: translateX(25%) rotate(6deg);
+  }
+  45% {
+    transform: translateX(-25%) rotate(-3.6deg);
+  }
+  60% {
+    transform: translateX(15%) rotate(2.4deg);
+  }
+  75% {
+    transform: translateX(-10%) rotate(-1.2deg);
+  }
+}
