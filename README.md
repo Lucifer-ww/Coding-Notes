@@ -2,6 +2,8 @@
 
 Thomas学习编程的笔记、心得:rocket:
 
+C++已经学了很久，Python的笔记最多，也是最精华的，建议看看，肯定能帮到大家，代码和文档数不胜数，别光白嫖要star！
+
 ### C++
 
 + oop编程（面向对象）
@@ -13,6 +15,11 @@ Thomas学习编程的笔记、心得:rocket:
 + 《Python从小白到大牛》——关东升著，学习记录
 + 日常知识：爬虫、GUI等等
 + 例程，实例小项目
++ matplotlib
++ tkinter
++ pygame
++ turtle
++ 游戏
 
 ### Web前端
 
