@@ -1,0 +1,31 @@
+{
+    "Thomas": {
+        "name": "Thomas",
+        "age": 12,
+        "weight": "none",
+        "height": "none",
+        "Sports": {
+            "屈伸腿": null,
+            "平板支撑": null,
+            "俯卧撑": null
+        }
+    },
+    "Victor": {
+        "name": "Victor",
+        "age": 46,
+        "weight": "none",
+        "height": "none",
+        "Sports": {
+
+        }
+    },
+    "ZXM": {
+        "name": "Mary",
+        "age": 46,
+        "weight": "none",
+        "height": "none",
+        "Sports": {
+
+        }
+    }
+}
