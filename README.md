@@ -1,3 +1,5 @@
+(非常可惜，由于更换电脑，GitHub Desktop本地库损坏，仓库无法更新)——2020-7
+
 # :sunny:Thomas编程:sunny:分享知识，获得Star！:smile_cat:
 
 Thomas学习编程的笔记、心得:rocket:
